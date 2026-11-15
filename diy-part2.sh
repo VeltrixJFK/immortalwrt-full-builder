@@ -252,3 +252,6 @@ else:
 "
 
 echo "--> DIY Part 2 执行成功！"
+# 强制开启 Open-Box 所需核心依赖
+sed -i 's/# CONFIG_PACKAGE_kmod-tun is not set/CONFIG_PACKAGE_kmod-tun=y/' .config
+echo "CONFIG_PACKAGE_kmod-tun=y" >> .config
